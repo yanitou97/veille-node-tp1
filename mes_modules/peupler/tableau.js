@@ -49,11 +49,44 @@ const tabCourriel = [
 	"@outlook.com"
 ];
 
+const tabVille = [
+	"Mascouche",
+	"Montréal",
+	"Longueuil",
+	"Brossard",
+	"Épiphanie",
+	"Terrebonne",
+	"Repentigny"
+];
+
+const tabEmploi = [
+	"Policier",
+	"Avocat",
+	"Pompier",
+	"Vétérinaire",
+	"Médecin",
+	"Concierge",
+	"Cuisinier"
+];
+
+const tabLoisir = [
+	"Camping",
+	"Lire",
+	"Cuisiner",
+	"Art",
+	"Cinéma",
+	"Jeux de société",
+	"Jeux vidéo"
+];
+
 const tableau = {
 	tabNom : tabNom,
 	tabPrenom : tabPrenom,
 	tabTelephone : tabTelephone,
-	tabCourriel : tabCourriel 
+	tabCourriel : tabCourriel,
+	tabVille : tabVille,
+	tabEmploi : tabEmploi,
+	tabLoisir : tabLoisir 
 
 }
 
