@@ -103,3 +103,18 @@ app.get('/vider', (req, res) => {
         res.redirect('/list')  // redirige vers la route qui affiche la collection
     })
 })
+
+app.post('/rechercher', (req, res) => {
+    let cursor = db.collection('adresse')
+                .find({$or:[
+                {prenom: req.body.rechercher},
+                {nom: req.body.rechercher},
+                {telephone: req.body.rechercher},
+                {courriel: req.body.rechercher},
+                ]}).toArray(function(err, resultat){
+                    console.log(resultat);
+                    res.render('adresses.ejs', {adresses: resultat})
+        })
+
+
+})
