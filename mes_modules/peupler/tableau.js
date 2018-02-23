@@ -1,34 +1,5 @@
-/*"use strict";
-const tabVille = [
-					"Montréal",
-					"Ottawa",
-					"Laval",
-					"Paris",
-					"Bruxelle",
-					"Gatineau",
-					"Gaspé",
-					"Calgary",
-					"Saskatshewan"
-				];
+"use strict";
 
-const tabDomaine = [
-					"gmail.com",
-					"videotron.ca",
-					"bell.ca",
-					"yahoo.com",
-					"hotmail.com"
-				];
-
-const tableau = {
-	tabVille : tabVille,
-	tabDomaine : tabDomaine 
-
-}
-
-/*
-module.exports.tabVille = tabVille;
-module.exports.tabDomaine = tabDomaine;	
-*/
 const tabNom = [
 	"Ouellet",
 	"Béland",
