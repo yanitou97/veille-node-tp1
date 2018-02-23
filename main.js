@@ -39,8 +39,7 @@ app.get('/', (req, res) => {
 app.get('/list', (req, res) => {
     let cursor = db.collection('adresse')
                 .find().toArray(function(err, resultat){
- 	if (err) return console.log(err)	
- 	console.log(JSON.stringify(resultat))	
+ 	if (err) return console.log(err)		
  	// transfert du contenu vers la vue index.ejs (renders)
  	// affiche le contenu de la BD
  	res.render('adresses.ejs', {adresses: resultat}) 
@@ -105,14 +104,14 @@ app.get('/vider', (req, res) => {
 })
 
 app.post('/rechercher', (req, res) => {
+    let regex =  new RegExp(".*"+req.body.rechercher+".*", "i");
     let cursor = db.collection('adresse')
                 .find({$or:[
-                {prenom: req.body.rechercher},
-                {nom: req.body.rechercher},
-                {telephone: req.body.rechercher},
-                {courriel: req.body.rechercher},
+                     {prenom: { $regex: regex }},
+                {nom: { $regex: regex }},
+                {telephone: { $regex: regex }},
+                {courriel: { $regex: regex }},
                 ]}).toArray(function(err, resultat){
-                    console.log(resultat);
                     res.render('adresses.ejs', {adresses: resultat})
         })
 
