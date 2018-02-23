@@ -11,7 +11,7 @@ const fs = require('fs');
 const bodyParser= require('body-parser')
 const MongoClient = require('mongodb').MongoClient // le pilote 
 const ObjectID = require('mongodb').ObjectID // le pilote 
-
+ 
 app.set('view engine', 'ejs'); // générateur de template 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static('public')) // pour utiliser le dossier public
