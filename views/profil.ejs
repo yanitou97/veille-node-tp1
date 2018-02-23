@@ -1,0 +1,12 @@
+<%- include('composants/head') %> 
+<body>
+ <%- include('composants/entete') %>
+ <h2>Profil</h2>
+ <% adresses.forEach(elm => {%>
+ <p><span>Prénom: </span><%=elm.prenom%></p>
+ <p><span>Nom: </span><%=elm.Nom%></p>
+ <p><span>Téléphone: </span><%=elm.telephone%></p>
+ <p><span>Courriel: </span><%=elm.courriel%></p>
+ <% }) %>
+ <%- include('composants/footer') %>
+</body>
