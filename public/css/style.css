@@ -2,17 +2,7 @@
     font-family: 'Raleway', sans-serif;
 }
 
-#peupler{
-    display: none;
-}
-
-#vider{
-    display: none;
-}
-
-@media only screen 
-and (min-width : 1224px) {
-    table{
+table{
         margin: 40px auto;
         border: 10px black solid;
         border-collapse: collapse;
@@ -57,4 +47,27 @@ and (min-width : 1224px) {
         margin: 90px auto;
 
     }
+
+#peupler{
+    display: none;
+}
+
+#vider{
+    display: none;
+}
+
+@media only screen 
+and (min-width : 1224px) {
+}
+
+@media only screen and (max-width: 1223px) {
+    table tr td:nth-child(1){ display:none;}
+    table tr th:nth-child(1){ display:none;}  
+}
+
+@media only screen and (max-width: 900px) {
+    table tr td:nth-child(4){ display:none;}
+    table tr td:nth-child(5){ display:none;}
+    table tr th:nth-child(4){ display:none;}
+    table tr th:nth-child(5){ display:none;} 
 }
