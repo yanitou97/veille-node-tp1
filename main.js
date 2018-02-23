@@ -117,3 +117,14 @@ app.post('/rechercher', (req, res) => {
 
 
 })
+
+app.get('/profil/:id', (req, res) => {
+    let cursor = db.collection('adresse')
+                .find({"_id": ObjectID(req.params.id)}).toArray(function(err, resultat){
+    if (err) return console.log(err)        
+    // transfert du contenu vers la vue index.ejs (renders)
+    // affiche le contenu de la BD
+    res.render('profil.ejs', {adresses: resultat}) 
+
+ }) 
+})
