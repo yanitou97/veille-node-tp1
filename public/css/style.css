@@ -20,7 +20,7 @@ td:nth-child(2), td:nth-child(4), td:nth-child(6){
     background-color: #EEEEEE; 
 }
 
-header, form, h1, p, footer{
+header, form, h1, footer{
     margin: 0 auto;
     text-align: center;
 }
